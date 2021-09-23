@@ -47,7 +47,7 @@ void vmessConstruct(Proxy &node, const std::string &group, const std::string &re
     node.Host = host.empty() ? add.data() : trim(host);
     node.Edge = edge;
 
-    if(net == "ws" || net == "http")
+    if(net == "ws" || net == "http" || net == "h2")
         node.Path = path.empty() ? "/" : trim(path);
     else
     {
